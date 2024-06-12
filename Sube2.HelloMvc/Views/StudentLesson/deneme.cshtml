@@ -1,0 +1,32 @@
+﻿@model IEnumerable<OgrenciDers>
+
+@{
+    ViewData["Title"] = "deneme";
+}
+
+<h1>Öğrenci Ders Kayıt İşlemleri</h1>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Öğrenci Ad</th>
+            <th>Öğrenci Soyad</th>
+            <th>Öğrenci Numara</th>
+            <th>Ders Ad</th>
+            <th>Kredi</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Ogrenci.Ad</td>
+                <td>@item.Ogrenci.Soyad</td>
+                <td>@item.Ogrenci.Numara</td>
+                <td>@item.Ders.Dersad</td>
+                <td>@item.Ders.Kredi</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
